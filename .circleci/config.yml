@@ -11,6 +11,11 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+test:
+  steps:      
+    - store_test_results:
+      path: test
+      prefix: tests
 workflows:
     build-and-test:
       jobs:
